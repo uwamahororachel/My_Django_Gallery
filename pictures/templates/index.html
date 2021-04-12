@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% load static%}
+{% block content %}
+
+{{block.super}}
+<div style="margin-top:100px">
+
+</div>
+ <div class="container">
+    <div class="row" id='gallery'>
+    {% for image in images %}
+         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="portfolio-wrap ">
+                     <div class="portfolio-wrap hovereffect">
+                         <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
+                             <img src="{{image.image.url}}" width='100%' href="" class="image" alt="Image" >
+                             <div class="overlay">
+                                 <h4>{{image.image_name}}</h4>
+                             </div>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+    {% empty %}
+    </div>
+    
