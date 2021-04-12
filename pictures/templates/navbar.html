@@ -9,4 +9,13 @@
         </button>
         <a class="navbar-brand" href="{% url 'gallery' %}" style='color:rgb(238, 255, 0);font-weight: bold; text-decoration: underline;'> Rachel's Gallery</a>
       
-    
+      <div class="navbar-collapse collapse">
+       
+        <div class='col-md-5'></div>
+        <div class="navbar navbar-nav navbar-center col-md-4" style='text-align:center;'>
+          <form class="form" role="search" action="{% url 'search_by_cat' %}">
+              <input type="text" class="form-control" placeholder="Search by category(flowers,shoes,clothes,phones)"name="image_category">
+          </form>
+        </div>
+    </div></div></div>
+  </nav>
