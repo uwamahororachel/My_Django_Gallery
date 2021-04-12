@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{% load static%}
+{% block content %}
+
+{{block.super}}
+<div class="container wrap" style='margin-top:80px;'>
+    <h3><i class="fas fa-map-marker-alt"></i> {{location.name}}</h3><hr style='background-color:rgb(117, 115, 115);height: 1px;border: none;'><br>
+    <div class="row">
+    {% for image in images %}
+         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                 <div class="portfolio-wrap ">
+                     <div class="portfolio-wrap hovereffect">
+                         <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
+                             <img src="{{image.image.url}}" href="" class="image" alt="Image" >
+                             <div class="overlay">
+                                 <h4>{{image.image_name}}</h4>
+                             </div>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+    {% empty %}
+    </div>
